@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        
+        function summ2Numbers(a, b){
+            if (isNaN(a) || isNaN(b)) {
+                return 0;
+            }
+            else {
+                return +a + +b;
+            }
+	    }
+
+        function difference2Numbers(a, b){
+            if (isNaN(a) || isNaN(b)) {
+                return 0;
+            }
+            else {
+                return +a - +b;
+            }
+        }
+        
+        function multyply2Numbers(a, b) {
+            if (isNaN(a) || isNaN(b)) {
+                return 0;
+            }
+            else {
+                return +a * +b;
+            }
+        }
+
+        function divide2Numbers(a, b) {
+            if (isNaN(a) || isNaN(b)) {
+                return 0;
+            }
+            else if (+b == 0) {
+                return Infinity;
+            }
+            else {
+                return +a / +b;
+            }
+        }
+        
+        let a = prompt("Введите переменную a");
+        let b = prompt("Введите переменную b");
+
+        alert("Сумма двух чисел " + summ2Numbers(a, b));
+        alert("Разница двух чисел " + difference2Numbers(a, b));
+        alert("Произведение двух чисел " + multyply2Numbers(a, b));
+        alert("Отношение двух чисел " + divide2Numbers(a, b));
+
+    </script>
+</body>
+</html>
