@@ -1,0 +1,27 @@
+<HTML><HEAD>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<BODY>
+	<script> 
+		
+		"use sctrict";
+		
+		function Product(name, price){
+			this.name = name;
+			this.price = price;
+		}
+		
+		Product.prototype.make25PercentPrice = function (){
+			this.price = this.price * 0.75;
+		}
+		
+		let prod1 = new Product("Товар 1", 100);
+		
+		console.log(prod1.price);
+		
+		prod1.make25PercentPrice();
+		
+		console.log(prod1.price);
+		
+	</script>
+</BODY>
+</HTML>
