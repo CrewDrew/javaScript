@@ -1,0 +1,43 @@
+<HTML><HEAD>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<BODY>
+	<script> 
+		
+		"use sctrict";
+		
+		class Post{
+			constructor(author, text, date){
+				this.author = author;
+				this.text = text;
+				this.date = date;
+			}
+			
+			edit(text){
+				this.text = text;
+			}
+		}
+		
+		class AttachedPost extends Post{
+			constructor(author, text, date){
+				super(author, text, date);
+				this.highlighted = false;
+			}
+			
+			makeTextHighlighted(){
+				this.highlighted = true;
+			}
+		}
+		
+		let attachedPost1 = new AttachedPost("Автор 1", "Некоторый текст", "01.01.2021");
+		
+		console.log(attachedPost1);
+		
+		attachedPost1.edit("Новый текст");
+		console.log(attachedPost1);
+		
+		attachedPost1.makeTextHighlighted();
+		console.log(attachedPost1);
+		
+	</script>
+</BODY>
+</HTML>
